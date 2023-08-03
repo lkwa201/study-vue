@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainHome from "./components/MainHome.vue"
-import HelloWorld from './components/HelloWorld.vue'
+import MainHome from "./views/MainHome.vue"
+import HelloWorld from './views/HelloWorld.vue'
 
 // function loadRoute(path) {
 //     let route = null;

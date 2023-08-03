@@ -1,9 +1,37 @@
-import { createApp  } from 'vue'
-import router from "./router"
+import { createApp , defineAsyncComponent } from 'vue'
+import { AgGridVue } from "ag-grid-vue3";
 
-import App from './App.vue'
+import "bootstrap/dist/css/bootstrap.css"; // [bootstrap]
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap'
 
 
+import router from "./router";
+import axios from 'axios';
+
+const COMPONEENTS = [
+	"MeButton", "MyLabel"
+];
+
+function loadComponents(app) {
+	try {
+		for(let comps of COMPONEENTS) {
+			app.component(comps, defineAsyncComponent(() =>
+			import(`@/components/${comps}.vue`)));
+		}
+	} catch (error) {
+		console.log("loadCompoments : error =" + error);
+	}
+}
+
+
+import App from './App.vue';
 const app = createApp(App);
 app.use(router);
+
+app.config.globalProperties.$router = router;
+app.config.globalProperties.$axios = axios;
+
+app.component("AgGridVue", AgGridVue);
+loadComponents(app);
 app.mount('#app');
