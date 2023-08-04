@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainHome from "./views/MainHome.vue"
 import HelloWorld from './views/HelloWorld.vue'
-
+import AgGridExample from './views/AgGridExample.vue'
 // function loadRoute(path) {
 //     let route = null;
 //     try {
@@ -27,6 +27,10 @@ const routes = [
         path: '/HelloWorld',
         component: HelloWorld
     },
+    {
+        path: '/grid',
+        component: AgGridExample      
+    }
 ];
 
 const router = new createRouter({

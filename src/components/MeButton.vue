@@ -1,7 +1,6 @@
 <template>
 	<button type="button" class="btn btn-outline-success" :class="onFormatSizeDisabled" >
-		<span v-if="hasLabel">{{label}}</span>
-		<i class="bi bi-search"></i>
+		<span v-if="hasLabel">{{label}}</span> <i class="bi bi-search"></i>
 	</button>
 </template>
 

@@ -1,5 +1,9 @@
 import { createApp , defineAsyncComponent } from 'vue'
 import { AgGridVue } from "ag-grid-vue3";
+//import {AllCommunityModules} from 'ag-grid-community/all-modules';
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-alpine.css";
+import "ag-grid-community/styles/ag-theme-material.css";
 
 import "bootstrap/dist/css/bootstrap.css"; // [bootstrap]
 import 'bootstrap-icons/font/bootstrap-icons.css';

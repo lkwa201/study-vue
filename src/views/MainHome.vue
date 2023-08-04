@@ -1,7 +1,8 @@
 <template>
+
 <div class="l-form">
 	<form>
-		<MyLabel label="버튼" size="20"></MyLabel>
+		<MyLabel label="버튼" size="1"></MyLabel>
 		
 		<div class="l-button">
 			<MeButton label="버튼" format="primary" icon="arrow-forward"></MeButton>
